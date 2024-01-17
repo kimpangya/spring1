@@ -1,3 +1,5 @@
+//만약에 버전 안맞아서 오류나면 강의 버전이랑 맞춰주자
+// 강의는 3.1.0이랑 1.1.0 사용중임 숫자 바꾸면 오른쪽에 코끼리 모양 버튼 뜸 그거 누르면됨
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.2.1'
@@ -21,6 +23,10 @@ repositories {
 	mavenCentral()
 }
 
+//필요한 라이브러리들을 외부 maven 레포지토리에서 가져옴
+//라이브러리 = 기능들 묶어놓은것
+//라이브러리별로 버전이 달라도 충돌이 일어나지않게해줌
+//gradle이 갖고온 라이브러리들은 왼쪽 프로젝트 목록 >  external libraries에서 확인 가능
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
